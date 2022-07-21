@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CB07C53-434B-4D58-A7F1-814014FB7D0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Tarabari.My.MyApplication</StartupObject>
+    <RootNamespace>Tarabari</RootNamespace>
+    <AssemblyName>Tarabari</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>Resources\TarabariLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Tarabari.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Tarabari.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\10.5.3700.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.ReportSource\10.5.3700.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Shared\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarsiLibrary.Resources, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DotNet Framework\VB.NET\Sample\farsi\FarsiLibrary_src\out\FarsiLibrary.Resources\FarsiLibrary.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DotNet Framework\VB.NET\Sample\farsi\FarsiLibrary_src\out\FarsiLibrary.Utils\FarsiLibrary.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="BLL\Kafi.vb" />
+    <Compile Include="BLL\Membership.vb" />
+    <Compile Include="BLL\Sanad.vb" />
+    <Compile Include="BLL\Setting.vb" />
+    <Compile Include="BLL\Tankhah.vb" />
+    <Compile Include="BLL\NavganStatus.vb" />
+    <Compile Include="BLL\FactorTamirat.vb" />
+    <Compile Include="DAL\dsLogin.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\dsReportTemp.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportTemp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInstallDB.Designer.vb">
+      <DependentUpon>frmInstallDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmInstallDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQVSanadList.Designer.vb">
+      <DependentUpon>frmQVSanadList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQVSanadList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSanadList.Designer.vb">
+      <DependentUpon>frmSanadList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSanadList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUsers.Designer.vb">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmKafi.Designer.vb">
+      <DependentUpon>frmKafi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKafi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSanadPardakhtNaghdiList.Designer.vb">
+      <DependentUpon>frmSanadPardakhtNaghdiList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSanadPardakhtNaghdiList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddEditSanad.Designer.vb">
+      <DependentUpon>frmAddEditSanad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddEditSanad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQVTankhah.Designer.vb">
+      <DependentUpon>frmQVTankhah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQVTankhah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAbout.Designer.vb">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAbout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQVFactorList.Designer.vb">
+      <DependentUpon>frmQVFactorList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQVFactorList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSetting.Designer.vb">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTankhah.Designer.vb">
+      <DependentUpon>frmTankhah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTankhah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTankhahList.Designer.vb">
+      <DependentUpon>frmTankhahList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTankhahList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmUserInput.Designer.vb">
+      <DependentUpon>frmUserInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmUserInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmRanandegan.Designer.vb">
+      <DependentUpon>frmRanandegan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmRanandegan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPardakhtFactorPrice.vb">
+      <DependentUpon>rptPardakhtFactorPrice.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptSanadBarname.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSanadBarname.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CrystalReport3.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptBargeEzam.vb">
+      <DependentUpon>rptBargeEzam.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptSanadNaghdi.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSanadNaghdi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptTankhah.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptTankhah.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BLL\vSelectNavgan.vb" />
+    <Compile Include="BLL\Navgan.vb" />
+    <Compile Include="BLL\Ranandegan.vb" />
+    <Compile Include="BLL\Mashin.vb" />
+    <Compile Include="BLL\Maghsad.vb" />
+    <Compile Include="BLL\Mabda.vb" />
+    <Compile Include="BLL\MahalBargiri.vb" />
+    <Compile Include="DAL\dsTarabari.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTarabari.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKarkardRoozane.Designer.vb">
+      <DependentUpon>frmKarkardRoozane.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmKarkardRoozane.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNavganList.Designer.vb">
+      <DependentUpon>frmNavganList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNavganList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFactorList.Designer.vb">
+      <DependentUpon>frmFactorList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFactorList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFactorTamirgah.Designer.vb">
+      <DependentUpon>frmFactorTamirgah.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFactorTamirgah.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNavganStatus.Designer.vb">
+      <DependentUpon>frmNavganStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNavganStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmQVEzamKhodro.Designer.vb">
+      <DependentUpon>frmQVEzamKhodro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmQVEzamKhodro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBazgashtKhodro.Designer.vb">
+      <DependentUpon>frmBazgashtKhodro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBazgashtKhodro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEzamKhodro.Designer.vb">
+      <DependentUpon>frmEzamKhodro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEzamKhodro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMashin.Designer.vb">
+      <DependentUpon>frmMashin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMashin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMaghsad.Designer.vb">
+      <DependentUpon>frmMaghsad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMaghsad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBase.Designer.vb">
+      <DependentUpon>frmBase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMabda.Designer.vb">
+      <DependentUpon>frmMabda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMabda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMahalBargiri.Designer.vb">
+      <DependentUpon>frmMahalBargiri.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMahalBargiri.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectNavgan.Designer.vb">
+      <DependentUpon>frmSelectNavgan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectNavgan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSummaryFactors.Designer.vb">
+      <DependentUpon>frmSummaryFactors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSummaryFactors.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\rptKarkardeRoozane.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptKarkardeRoozane.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\AdvancedMaskedTextBox.designer.vb">
+      <DependentUpon>AdvancedMaskedTextBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AdvancedMaskedTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\AdvancedTextBox.designer.vb">
+      <DependentUpon>AdvancedTextBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AdvancedTextBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\Logger.vb" />
+    <Compile Include="Tools\Registry.vb" />
+    <Compile Include="Tools\SqlUtility.vb" />
+    <Compile Include="Tools\Utilities.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmInstallDB.resx">
+      <DependentUpon>frmInstallDB.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQVSanadList.resx">
+      <DependentUpon>frmQVSanadList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSanadList.resx">
+      <DependentUpon>frmSanadList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUsers.resx">
+      <DependentUpon>frmUsers.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKafi.resx">
+      <DependentUpon>frmKafi.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSanadPardakhtNaghdiList.resx">
+      <DependentUpon>frmSanadPardakhtNaghdiList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddEditSanad.resx">
+      <DependentUpon>frmAddEditSanad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQVTankhah.resx">
+      <DependentUpon>frmQVTankhah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAbout.resx">
+      <DependentUpon>frmAbout.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmKarkardRoozane.resx">
+      <DependentUpon>frmKarkardRoozane.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNavganList.resx">
+      <DependentUpon>frmNavganList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFactorList.resx">
+      <DependentUpon>frmFactorList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmFactorTamirgah.resx">
+      <DependentUpon>frmFactorTamirgah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNavganStatus.resx">
+      <DependentUpon>frmNavganStatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQVEzamKhodro.resx">
+      <DependentUpon>frmQVEzamKhodro.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBazgashtKhodro.resx">
+      <DependentUpon>frmBazgashtKhodro.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEzamKhodro.resx">
+      <DependentUpon>frmEzamKhodro.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMashin.resx">
+      <DependentUpon>frmMashin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMaghsad.resx">
+      <DependentUpon>frmMaghsad.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBase.resx">
+      <DependentUpon>frmBase.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMabda.resx">
+      <DependentUpon>frmMabda.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMahalBargiri.resx">
+      <DependentUpon>frmMahalBargiri.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmQVFactorList.resx">
+      <DependentUpon>frmQVFactorList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectNavgan.resx">
+      <DependentUpon>frmSelectNavgan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSetting.resx">
+      <DependentUpon>frmSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSummaryFactors.resx">
+      <DependentUpon>frmSummaryFactors.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTankhah.resx">
+      <DependentUpon>frmTankhah.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTankhahList.resx">
+      <DependentUpon>frmTankhahList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmUserInput.resx">
+      <DependentUpon>frmUserInput.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmRanandegan.resx">
+      <DependentUpon>frmRanandegan.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPardakhtFactorPrice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPardakhtFactorPrice.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSanadBarname.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSanadBarname.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptBargeEzam.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBargeEzam.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptKarkardeRoozane.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptKarkardeRoozane.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptSanadNaghdi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSanadNaghdi.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptTankhah.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTankhah.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\AdvancedMaskedTextBox.resx">
+      <DependentUpon>AdvancedMaskedTextBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\AdvancedTextBox.resx">
+      <DependentUpon>AdvancedTextBox.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DAL\dsTarabari.xsc">
+      <DependentUpon>dsTarabari.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsTarabari.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTarabari.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\dsTarabari.xss">
+      <DependentUpon>dsTarabari.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DAL\dsLogin.xsc">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsLogin.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsLogin.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\dsLogin.xss">
+      <DependentUpon>dsLogin.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsReportTemp.xsc">
+      <DependentUpon>dsReportTemp.xsd</DependentUpon>
+    </None>
+    <None Include="DAL\dsReportTemp.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportTemp.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DAL\dsReportTemp.xss">
+      <DependentUpon>dsReportTemp.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\TarabariLogo.ico" />
+    <None Include="Resources\UnknowUser.png" />
+    <None Include="Resources\Filter.gif" />
+    <None Include="Resources\RemoveFilter.gif" />
+    <None Include="Resources\New.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Clear.png" />
+    <None Include="Resources\Show.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Change.png" />
+    <None Include="Resources\OK.png" />
+    <None Include="Resources\LoginIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
